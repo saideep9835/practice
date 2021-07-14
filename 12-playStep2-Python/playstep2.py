@@ -35,4 +35,53 @@
 
 def playstep2(hand, dice):
 	# your code goes here
-	pass
+	a = [int(i) for i in str(hand)]
+	b = set(a)
+	if len(a)!=len(b):
+		if a[0]==a[1]:
+			c = a[0],a[1]
+			b = dice%10
+			dice=dice//10
+			d=[]
+			e=[]
+			e=[a[1],a[2],b]
+			e.sort(reverse=True)
+			d.append(int(f"{e[0]}{e[1]}{e[2]}"))
+			d.append(dice)
+			return (tuple(d))
+		if a[1]==a[2]:
+			c = a[1],a[2]
+			b = dice%10
+			dice=dice//10
+			d=[]
+			e=[]
+			e=[c[0],c[1],b]
+			e.sort(reverse=True)
+			d.append(int(f"{e[0]}{e[1]}{e[2]}"))
+			d.append(dice)
+			return (tuple(d))
+		if a[2]==a[0]:
+			c = a[2],a[0]
+			b = dice%10
+			dice=dice//10
+			d=[]
+			e=[]
+			e=[a[1],a[2],b]
+			e.sort(reverse=True)
+			d.append(int(f"{e[0]}{e[1]}{e[2]}"))
+			d.append(dice)
+			return (tuple(d))
+
+	else:
+		h = []
+		g = []
+		a = max(a)
+		h.append(a)
+		h.append(dice%10)
+		dice = dice//10
+		h.append(dice%10)
+		dice = dice//10
+		h.sort(reverse=True)
+		g.append(int(f"{h[0]}{h[1]}{h[2]}"))
+		g.append(dice)
+		return(tuple(g))
