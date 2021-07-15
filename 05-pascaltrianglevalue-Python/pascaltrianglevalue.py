@@ -6,7 +6,12 @@
 # are not legal values, return None, instead of crashing. 
 
 
-
+def fact(n):
+	a = 1
+	for i in range(1,n+1):
+		a = a*i
+	return a
 
 def fun_pascaltrianglevalue(row, col):
-	return 1
+	d = fact(row)/(fact(col)*fact(row-col))
+	return int(d)
