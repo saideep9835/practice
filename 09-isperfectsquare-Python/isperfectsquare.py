@@ -20,7 +20,7 @@ def isperfectsquare(n):
 
 			return True
 		return False
-	# elif  type(n)== str or n<0 or type(n)==float :
+	
 	return False
 
 	
