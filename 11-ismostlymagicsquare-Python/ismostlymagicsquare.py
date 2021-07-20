@@ -15,4 +15,9 @@
 
 def ismostlymagicsquare(a):
 	# Your code goes here
-	pass
+	x = [sum(i) for i in a]
+	y = [ sum(i) for i in zip(*a) ]
+	if x == y:
+		return True
+	return False
+	
