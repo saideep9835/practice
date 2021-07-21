@@ -11,4 +11,18 @@
 
 def lookandsay(a):
 	# Your code goes here
-	pass
+	m = []  
+	k = 0   
+	c = 1  
+	if(len(a)==0):   
+		return m
+	for i in a:    
+		if(i!=k):  
+			m.append((c,k))  
+			k = i  
+			c = 1
+        else:
+            c+=1   
+	m.append((c,i))  
+	return m[1:] 
+	
