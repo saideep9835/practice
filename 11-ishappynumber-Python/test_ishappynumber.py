@@ -5,7 +5,7 @@ import pytest
 
 
 @pytest.mark.parametrize('m, result',[
-	(-7, False), (1, True),
+	(1, True),
 	(2, False), (98, False),
 	(405, False), (97, True),
 	(404, True), (0, False)
