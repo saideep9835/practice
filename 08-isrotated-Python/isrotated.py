@@ -6,4 +6,9 @@
 
 def isrotated(str1, str2):
 	#Your code goes here
-	pass
+	n=len(str1)
+	for i in range(-1,n):
+		str1=str1[i:] + str1[:i]
+		if(str1 == str2):
+			return True
+	return False
