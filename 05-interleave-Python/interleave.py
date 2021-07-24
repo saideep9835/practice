@@ -8,5 +8,9 @@
 
 
 def fun_interleave(s1,s2):
-	return ""
+	s = list(s2)
+	for i,c in enumerate(s1):
+		s.insert(i*2,c)
+	return "".join(s)
+	
 	
