@@ -7,4 +7,11 @@
 
 def issorted(a):
 	# your code goes here
-	pass
+	b=a[:]
+	c = a[:]
+	b.sort()
+	c.sort(reverse=True)
+	if b == a or c == a:
+		return True
+	if b!=a:
+		return False
