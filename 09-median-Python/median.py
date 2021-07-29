@@ -5,4 +5,13 @@
 
 def median(a):
 	# your code goes here
-	pass
+	l = 0
+	h = len(a)-1
+	b = (h+l)//2
+	if a == []:
+		return None
+	elif len(a)%2!=0:
+		
+		return a[b]
+	else:
+		return (a[b+1]+a[b])/2
