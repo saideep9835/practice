@@ -9,5 +9,27 @@
 # for primality (and you may need to think about that hint for a while for it to make sense!).
 
 
+def isPrime(n):
+  
+    # Corner case
+    if n <= 1:
+        return False
+  
+    # Check from 2 to n-1
+    for i in range(2, n):
+        if n % i == 0:
+            return False
+  
+    return True
+def iscarol(n):
+    r = (2**n) - 1
+    return r * r - 2
 def fun_nth_carolprime(n):
-    return 0
+    a=0
+    b=0
+    while(a<=n):
+        b+=1
+        c = iscarol(b)
+        if(isPrime(c)):
+            a+=1
+    return c
